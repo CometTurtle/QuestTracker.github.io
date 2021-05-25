@@ -1,0 +1,92 @@
+body, html {
+  height: 100%;
+}
+
+body{
+background-image: url(images/wood.jpg);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+/* .to-do {
+    border: 5px solid red;
+
+  } */
+
+  .bg-img-1 {
+    /* image */
+    background-image: url(images/scroll.png);
+    background-size:  100% 100%;
+    background-repeat: no-repeat;
+  }
+
+
+
+  .bg-img-2{
+    background-image: url(images/scrap.png);
+    background-size:  100% 100%;
+    background-repeat: no-repeat;
+    /* background-color: transparent !important; */
+  }
+
+
+  
+
+.filler{
+  margin-left: 90px;
+  margin-right: 90px;
+  padding: 30px;
+}
+
+
+.title{
+  font-size: 7rem;
+  color:white;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.card{
+  background-color: transparent !important;
+}
+
+.bg-img-3{
+  background-image: url(images/parchment.png);
+    background-size:  100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .filler{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+  /* .card-columns { 
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  } */

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- my css -->
+    <link rel="stylesheet" href="style.css">
+    <title>Hello, world!</title>
+  </head>
+
+
+  <body>
+    <h1 class="title">Quest Tracker</h1>
+<br>
+<!-- -------------------------------------------------------------------input task section--------------------------------------------------------------------------------------- -->
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col to-do bg-img-1">
+            <form class="filler">
+                <br> <br>
+                <div class="row">
+                    <div class="col">
+                    <!------------------------------------------------------- the names of the people involved  -->
+                      <input type="text" class="form-control" placeholder="task set by"  id="set-by" onfocus="this.value=''" required>
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="task set for" id="set-for" onfocus="this.value=''" required>
+                    </div>
+                  </div>
+                  <br>
+
+                <div class="form-group">
+                 <!------------------------------------------------------------------ decription of the task -->
+                  <label for="exampleInputdescription">description</label>
+                  <input type="text" class="form-control" id="exampleInputdescription" onfocus="this.value=''" required>
+                </div>
+
+                <div class="form-group">
+                                                                                            <!-- due date for the task -->
+                    <label for="due-day">due by:</label>
+                    <input type="date" class="form-control" id="due-day" name="due-day" >
+                </div>
+
+                <div class="form-group">
+                                                                                            <!-- task status -->
+                    <label for="exampleFormControlSelect1">Task Satus</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option value="todo">to do</option>
+                      <option value="progress">in progress</option>
+                      <option value="review">review</option>
+                      <option value="done">done</option>
+                    </select>
+                  </div>
+
+                <div class="form-group form-check">
+                </div>
+
+                <button onclick="add()" type="button" class="btn btn-primary">Submit</button> 
+               
+              </form>
+              <br>
+          </div>
+          <!-- ----------------------------------------------------second collumn ------------------------------------------------------------------->
+          <div class="col briefHere">
+            <br> <br>
+            <div class="card-body bg-img-3 ">
+              <div class="filler">
+              <h1>About Quest Tracker</h1>
+              <br>
+              <ul>
+                <li>all fields must be filled in order to submit quest</li>
+                <li>input fields clear on focus</li>
+                <li>names cant be longer than 20 charaters</li>
+                <li>task description cant be longer than 100 charaters</li>
+              </ul>
+            </div>
+          </div>
+
+              
+              </div>
+             
+
+
+
+
+              </div>
+          </div>
+        </div>
+
+        <br>
+    </div>
+
+        <!-- -------------------------------------------------------cards------------------------------------------- -->
+        <!-- <div class="row row-cols-1 row-cols-md-6">
+            <div class="col mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                          Task
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><h5>assiggned by</h5>
+                        <p>cassita</p></li>
+                            <li class="list-group-item"><h5>assiggned for</h5>
+                        <p>cassita</p></li>
+                            <li class="list-group-item"><h5>due date</h5>
+                        <p>17/05/2021</p></li> 
+                            <li class="list-group-item"><h5>status</h5>
+                        <p>in progress</p></li>
+                            <li class="list-group-item"><h5>description</h5>
+                        <p>find remaining brain cells</p></li>   
+                        
+                        </ul>
+                        
+                      </div>
+            </div>
+            <div class="col mb-4">          
+                    <div class="card">
+                        <div class="card-header">
+                          Task
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><h5>assiggned by</h5>
+                        <p>cassita</p></li>
+                            <li class="list-group-item"><h5>assiggned for</h5>
+                        <p>cassita</p></li>
+                            <li class="list-group-item"><h5>due date</h5>
+                        <p>17/05/2021</p></li> 
+                            <li class="list-group-item"><h5>status</h5>
+                        <p>in progress</p></li>
+                            <li class="list-group-item"><h5>description</h5>
+                        <p>find will to go on</p></li>   
+                        
+                        </ul>
+                        
+                      </div>
+            </div>
+            <div class="col mb-4">
+                    <div class="card" >
+                        <div class="card-header">
+                          Task
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><h5>assiggned by</h5>
+                        <p>cassita</p></li>
+                            <li class="list-group-item"><h5>assiggned for</h5>
+                        <p>cassita</p></li>
+                            <li class="list-group-item"><h5>due date</h5>
+                        <p>17/05/2021</p></li> 
+                            <li class="list-group-item"><h5>status</h5>
+                        <p>in progress</p></li>
+                            <li class="list-group-item"><h5>description</h5>
+                        <p>world domination</p></li>   
+                        
+                        </ul>
+                        
+                      </div>
+            </div>
+            <div class="col mb-4">
+                    <div class="card" >
+                        <div class="card-header">
+                          Task
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><h5>assiggned by</h5>
+                        <p>cassita</p></li>
+                            <li class="list-group-item"><h5>assiggned for</h5>
+                        <p>cassita</p></li>
+                            <li class="list-group-item"><h5>due date</h5>
+                        <p>17/05/2021</p></li> 
+                            <li class="list-group-item"><h5>status</h5>
+                        <p>in progress</p></li>
+                            <li class="list-group-item"><h5>description</h5>
+                        <p>find remaining brain cells</p></li>   
+                        </ul>
+                      </div> 
+            </div>
+          </div>
+        -->
+          <br><br>
+
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="container-fluid">          
+          <div class="row" id="cardsHere" style="background-color: transparent">
+              <!-- where the cards show up -->
+              
+
+          </div>
+</div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
